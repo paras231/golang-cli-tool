@@ -1,0 +1,5 @@
+/bin/           # Compiled binaries
+/go.sum         # Optional, unless you want strict dependency versioning
+/vendor/
+
+go.sum
