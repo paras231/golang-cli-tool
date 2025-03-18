@@ -20,7 +20,3 @@ var HelloCommand = &cobra.Command{
 		fmt.Printf("Hello, %s! Welcome to MyCLI.\n", name)
 	},
 }
-
-func init() {
-	HelloCommand.Flags().StringP("name", "n", "", "Your name")
-}
