@@ -31,6 +31,17 @@ var projectBuildercmd = &cobra.Command{
 			fmt.Println("Error creating file:", err)
 			return
 		}
+		// wait to complete the execution of function then use defer to close file
+
 		defer file.Close()
+
+		jsCode := `console.log('Hello world this is js file created using golang cli tool');`
+		_, err = file.WriteString(jsCode)
+
+		if err != nil {
+			fmt.Println("error writing file", err)
+			return
+		}
+		fmt.Println("File created and content written successfully:", filePath)
 	},
 }
