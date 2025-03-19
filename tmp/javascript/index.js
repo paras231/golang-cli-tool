@@ -1,0 +1,1 @@
+console.log('Hello world this is js file created using golang cli tool');
